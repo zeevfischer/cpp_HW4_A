@@ -1,5 +1,6 @@
+#ifndef NINJA_HPP
+#define NINJA_HPP
 
-#pragma once
 #include "Character.hpp"
 
 namespace ariel{
@@ -12,10 +13,10 @@ namespace ariel{
             ~Ninja();
             void move(Character* opponent);
             void slash(Character* opponent);
-            int getSpeed();
 
             //for tests
-            void print() override;
+            int getSpeed();
+            string print() override;
     };
     //Ninja classification
     class OldNinja:public Ninja{
@@ -31,3 +32,4 @@ namespace ariel{
             YountNinja(string name, Point location);
     };
 }
+#endif

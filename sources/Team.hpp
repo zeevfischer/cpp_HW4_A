@@ -1,21 +1,23 @@
+#ifndef TEAM_HPP
+#define TEAM_HPP
+#include "Character.hpp"
 #include "cowboy.hpp"
 #include "Ninja.hpp"
-#include "Character.hpp"
-#include "baseTeam.hpp"
+#include "point.hpp"
 #include <vector>
 namespace ariel{
-    class Team:public baseTeam
+    class Team
     {
         private:
-            // vector<Character*> members; can i see what this Charecter is ?
-            vector<Cowboy*> cowboys;
-            vector<Ninja*> ninjas;
+            vector<Character*> cowboys;//<=10
+            Character* leader;
         public:
             Team(Character* leader);
-            // ~Team();
-            // void add(Character* NewMember);
-            // int stillAlive();
-            // void attack(Character* leader);
-            // void print();
+            ~Team();
+            void add(Character* NewMember);
+            int stillAlive();
+            void attack(Team* leader);
+            void print();
     };
 }
+#endif

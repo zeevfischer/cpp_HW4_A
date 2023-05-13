@@ -1,4 +1,5 @@
-#pragma once
+#ifndef COWBOY_HPP
+#define COWBOY_HPP
 #include "Character.hpp"
 
 namespace ariel
@@ -9,12 +10,13 @@ namespace ariel
         int bullets;
     public:
         Cowboy(string name ,Point location);
-        // ~Cowboy();
-        void shoot();
+        ~Cowboy();
+        void shoot(Character *atack);
         bool hasboolets();
         void reload();
         
         //for test
-        void print() override;
+        string print() override;
     };   
 }
+#endif
