@@ -9,20 +9,29 @@ namespace ariel{
     }
     
     bool Character::isAlive(){
-        return 1;
+        if(this->life > 0)
+        {
+            return true;
+        }
+        return false;
     }
-    double Character::distance(const Character& another){
-        return 1;
+    //d = sqr(x1-x2)^2 + (y1-y2)^2
+    double Character::distance(const Character* another)
+    {
+        return -1;
     }
-    void Character::hit(int damage){}
+    void Character::hit(int damage)
+    {
+        this->life -= damage;
+    }
     string Character::GetName(){
-        return " ";
+        return this->name;
     }
     Point Character::Getlocation(){
-        return Point(0,0);
+        return this->location;
     }
     string Character::print(){
-        return " ";
+        return "not yes";
     }   
     int Character::GetLife()
     {

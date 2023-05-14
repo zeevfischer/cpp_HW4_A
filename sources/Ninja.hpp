@@ -6,10 +6,10 @@
 namespace ariel{
     class Ninja:public Character
     {
-        private:
+        protected:
             int speed;
         public:
-            Ninja(Point location,string name,int life, int speed);//:Character(location,life,name),speed(speed){}
+            Ninja(Point location,string name,int life, int speed);
             ~Ninja();
             void move(Character* opponent);
             void slash(Character* opponent);
@@ -19,14 +19,22 @@ namespace ariel{
             string print() override;
     };
     //Ninja classification
+    /*
+        all the Ninjas have the same functions and parameters the only difference is the value 
+        youngNinja speed 14 life 100
+        Traind speed 12 life 120
+        old speed 8 life 140 
+    */
     class OldNinja:public Ninja{
         public:
             OldNinja(string name, Point location);
     };
+
     class TrainedNinja:public Ninja{
         public:
             TrainedNinja(string name, Point location);
     };
+    
     class YountNinja:public Ninja{
         public:
             YountNinja(string name, Point location);

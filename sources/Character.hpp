@@ -9,7 +9,7 @@ namespace ariel
 {
     class Character
     {
-    private:
+    protected:
         Point location;
         int life;
         string name;
@@ -18,7 +18,7 @@ namespace ariel
         Character();
         ~Character();
         bool isAlive(); // life > 0
-        double distance(const Character& other);
+        double distance(const Character* other);
         void hit(int attack);//life - attack
         virtual string print() = 0;
 

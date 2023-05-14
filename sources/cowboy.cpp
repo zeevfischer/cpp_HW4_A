@@ -21,6 +21,7 @@ namespace ariel
         if(this->bullets > 0)
         {
             return true;
+
         }
         else
         {
@@ -39,8 +40,8 @@ namespace ariel
     {
         string print = "";
         print +=this->GetName() + ": is a Cowboy\n";
-        print += "life left: " + this->GetLife() + '\n';
-        print += "location: " + this->Getlocation().print() + '\n';
-
+        print += "life left: " + to_string(this->GetLife());
+        print += "\nlocation: " + this->Getlocation().print() + "\n";
+        return print;
     }
 }

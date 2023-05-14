@@ -1,8 +1,8 @@
 #ifndef POINT_HPP
 #define POINT_HPP
-// #include <iostream>
-// #include <string>
-// using namespace std;
+#include <iostream>
+#include <string>
+using namespace std;
 namespace ariel
 {
     class Point
