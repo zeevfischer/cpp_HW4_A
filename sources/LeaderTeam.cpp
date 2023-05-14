@@ -23,12 +23,20 @@ namespace ariel
         int count =0;
         for(const auto &member : this->members)
         {
-            // if(member->GetLife() > 0)
-            // {
-            //         count ++;
-            // }
-
+            if(member->GetLife() > 0)
+            {
+                    count ++;
+            }
         }
         return count;
     }
+    void LeaderTeam::attack(Team* team)
+    {
+
+    }
+    void LeaderTeam::print()
+    {
+        
+    }
+
 }

@@ -5,6 +5,7 @@
 #include "Ninja.hpp"
 #include "point.hpp"
 #include <vector>
+#include "Team.hpp"
 namespace ariel
 {
     class LeaderTeam
@@ -17,7 +18,7 @@ namespace ariel
             ~LeaderTeam();
             void add(Character* NewMember);
             int stillAlive();
-            void attack(Team* team);
+            virtual void attack(Team* team);
             void print();
     };
 }
