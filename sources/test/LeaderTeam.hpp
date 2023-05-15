@@ -10,7 +10,7 @@ namespace ariel
 {
     class LeaderTeam
     {
-        private:
+        protected:
             vector<Character*> members;//<=10
             Character* leader;
         public:
@@ -18,7 +18,7 @@ namespace ariel
             ~LeaderTeam();
             void add(Character* NewMember);
             int stillAlive();
-            virtual void attack(Team* team);
+            virtual void attack(LeaderTeam* team) = 0;
             void print();
     };
 }

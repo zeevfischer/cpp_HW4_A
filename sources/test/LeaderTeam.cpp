@@ -30,7 +30,7 @@ namespace ariel
         }
         return count;
     }
-    void LeaderTeam::attack(Team* team)
+    void LeaderTeam::attack(LeaderTeam* team)
     {
 
     }

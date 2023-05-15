@@ -1,31 +1,46 @@
 #ifndef TEAM_HPP
 #define TEAM_HPP
-#include "LeaderTeam.hpp"
+// #include "LeaderTeam.hpp"
+#include "Character.hpp"
+#include "cowboy.hpp"
+#include "Ninja.hpp"
+#include "point.hpp"
 #include <vector>
 namespace ariel{
+    class LeaderTeam
+    {
+        protected:
+            vector<Character*> members;//<=10
+            Character* leader;
+        public:
+            LeaderTeam(Character* leader);
+            // ~LeaderTeam();
+            void add(Character* NewMember);
+            int stillAlive();
+            virtual void attack(LeaderTeam* team) = 0;
+            void print();
+    };
+
     class Team:public LeaderTeam
     {
         public:
             Team(Character* leader):LeaderTeam(leader){}
-            ~Team();
-            void attack(Team* team) override;
+            void attack(LeaderTeam* team) override;
     };
 
-    class Team2:public LeaderTeam
-    {
-        public:
-            Team2(Character* leader):LeaderTeam(leader){}
-            ~Team2();
-            void attack(Team* team) override;
+    // class Team2:public LeaderTeam
+    // {
+    //     public:
+    //         Team2(Character* leader):LeaderTeam(leader){}
+    //         void attack(LeaderTeam* team) override;
 
-    };
-    class SmartTeam:public LeaderTeam
-    {
-        public:
-            SmartTeam(Character* leader):LeaderTeam(leader){}
-            ~SmartTeam();
-            void attack(Team* team) override;
+    // };
+    // class SmartTeam:public LeaderTeam
+    // {
+    //     public:
+    //         SmartTeam(Character* leader):LeaderTeam(leader){}
+    //         void attack(LeaderTeam* team) override;
 
-    };
+    // };
 }
 #endif

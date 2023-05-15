@@ -9,6 +9,8 @@ namespace ariel
         this->x = a;
         this->y = b;
     }
+    Point::Point()
+    {}
     double Point::distance(Point p)
     {
             return 0;
@@ -16,6 +18,14 @@ namespace ariel
     Point moveTowards(Point origin,Point dest,double length)
     {
         return Point(0,0);
+    }
+    double Point::get_x()
+    {
+        return this->x;
+    }
+    double Point::get_y()
+    {
+        return this->y;
     }
     string Point::print()
     {
