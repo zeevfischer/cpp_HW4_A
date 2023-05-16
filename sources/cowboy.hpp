@@ -10,7 +10,7 @@ namespace ariel
         int bullets;
     public:
         Cowboy(string name ,Point location);
-        ~Cowboy();
+        // ~Cowboy();
         void shoot(Character *atack);
         bool hasboolets();
         void reload();

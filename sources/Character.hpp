@@ -9,14 +9,14 @@ namespace ariel
 {
     class Character
     {
-    protected:
+    private:
         Point location;
         int life;
         string name;
     public:
         Character(Point location,int life,string name);
         Character();
-        ~Character();
+        // ~Character();
         bool isAlive(); // life > 0
         double distance(const Character* other);
         void hit(int attack);//life - attack
@@ -25,9 +25,12 @@ namespace ariel
         //getters
         string GetName();
         Point Getlocation();
-
-        //my functions
         int GetLife();
+        //setters
+        void SetName(string name);
+        void Setlocation(Point location);
+        void Setlocation(int x,int y);
+        void Setlife(int life);
 
 
 

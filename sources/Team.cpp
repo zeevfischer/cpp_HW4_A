@@ -38,19 +38,28 @@ namespace ariel
     {
         
     }
+    vector<Character*> LeaderTeam::GetMembers()
+    {
+        return this->members;
+    }
+    Character* LeaderTeam::Getleader()
+    {
+        return this->leader;
+    }
+
 
     //Team
     void Team::attack(LeaderTeam* team)
     {
 
     }
-    // void Team2::attack(LeaderTeam* team)
-    // {
+    void Team2::attack(LeaderTeam* team)
+    {
         
-    // }
-    // void SmartTeam::attack(LeaderTeam* team)
-    // {
+    }
+    void SmartTeam::attack(LeaderTeam* team)
+    {
         
-    // }
+    }
 
 }

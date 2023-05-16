@@ -26,6 +26,10 @@ namespace ariel
     {
         return this->speed;
     }
+    void Ninja::setSpeed(int speed)
+    {
+        this->speed = speed;
+    }
     string Ninja::print()
     {
         string print = "";
@@ -44,6 +48,6 @@ namespace ariel
         : Ninja(location, name, 120, 12) {}
 
     //YountNinja constructor
-    YountNinja::YountNinja(string name, Point location)
+    YoungNinja::YoungNinja(string name, Point location)
         : Ninja(location, name, 100, 14) {}
 }

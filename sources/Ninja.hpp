@@ -6,16 +6,17 @@
 namespace ariel{
     class Ninja:public Character
     {
-        protected:
+        private:
             int speed;
         public:
             Ninja(Point location,string name,int life, int speed);
-            ~Ninja();
+            // ~Ninja();
             void move(Character* opponent);
             void slash(Character* opponent);
 
             //for tests
             int getSpeed();
+            void setSpeed(int speed);
             string print() override;
     };
     //Ninja classification
@@ -35,9 +36,9 @@ namespace ariel{
             TrainedNinja(string name, Point location);
     };
     
-    class YountNinja:public Ninja{
+    class YoungNinja:public Ninja{
         public:
-            YountNinja(string name, Point location);
+            YoungNinja(string name, Point location);
     };
 }
 #endif

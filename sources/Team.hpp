@@ -9,7 +9,7 @@
 namespace ariel{
     class LeaderTeam
     {
-        protected:
+        private:
             vector<Character*> members;//<=10
             Character* leader;
         public:
@@ -19,6 +19,9 @@ namespace ariel{
             int stillAlive();
             virtual void attack(LeaderTeam* team) = 0;
             void print();
+            //my functions
+            vector<Character*> GetMembers();
+            Character* Getleader();
     };
 
     class Team:public LeaderTeam
@@ -28,19 +31,19 @@ namespace ariel{
             void attack(LeaderTeam* team) override;
     };
 
-    // class Team2:public LeaderTeam
-    // {
-    //     public:
-    //         Team2(Character* leader):LeaderTeam(leader){}
-    //         void attack(LeaderTeam* team) override;
+    class Team2:public LeaderTeam
+    {
+        public:
+            Team2(Character* leader):LeaderTeam(leader){}
+            void attack(LeaderTeam* team) override;
 
-    // };
-    // class SmartTeam:public LeaderTeam
-    // {
-    //     public:
-    //         SmartTeam(Character* leader):LeaderTeam(leader){}
-    //         void attack(LeaderTeam* team) override;
+    };
+    class SmartTeam:public LeaderTeam
+    {
+        public:
+            SmartTeam(Character* leader):LeaderTeam(leader){}
+            void attack(LeaderTeam* team) override;
 
-    // };
+    };
 }
 #endif

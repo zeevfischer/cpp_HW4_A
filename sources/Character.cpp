@@ -24,18 +24,41 @@ namespace ariel{
     {
         this->life -= damage;
     }
-    string Character::GetName(){
+    string Character::print()
+    {
+        return "not yet";
+    }   
+    //getters
+    string Character::GetName()
+    {
         return this->name;
     }
-    Point Character::Getlocation(){
+    Point Character::Getlocation()
+    {
         return this->location;
     }
-    string Character::print(){
-        return "not yes";
-    }   
     int Character::GetLife()
     {
         return this->life;
+    }
+    //setters
+    void Character::Setlife(int life)
+    {
+        this->life = life;
+    }
+    void Character::SetName(string name)
+    {
+        this->name = name;
+    }
+    void Character::Setlocation(Point location)
+    {
+        Point p(location.get_x(),location.get_y());
+        this->location = p;
+    }
+    void Character::Setlocation(int x,int y)
+    {
+        Point p(x,y);
+        this->location = p;
     }
 
 }

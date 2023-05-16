@@ -15,7 +15,7 @@ namespace ariel
         Point();
         // ~Point();
         double distance(Point p);
-        friend Point moveTowards(Point origin ,Point dest,double length);
+        friend Point moveTowards(Point& origin ,Point& dest,double length);
         
         //getters
         double get_x();

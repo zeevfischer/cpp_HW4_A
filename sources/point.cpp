@@ -15,7 +15,7 @@ namespace ariel
     {
             return 0;
     }
-    Point moveTowards(Point origin,Point dest,double length)
+    Point moveTowards(Point& origin,Point& dest,double length)
     {
         return Point(0,0);
     }
